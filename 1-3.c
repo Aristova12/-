@@ -29,7 +29,7 @@ double Weight(const double m, const double g);
  */
 int main() {
     const double g = 9.8;
-	  printf("Enter m: ");
+	printf("Enter m: ");
     double m = GetDouble();
     printf("Сила тяжести = %lf\n", Gravity(m, g));
     printf("Вес мешка = %lf", Weight(m, g));
@@ -45,4 +45,11 @@ double GetDouble(){
     }
     return value;
 
+}
+double Gravity(const double m, const double g){
+    return m*g;
+}
+
+double Weight(const double m, const double g){
+    return m*g;
 }
