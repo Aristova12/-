@@ -41,7 +41,7 @@ double GetDouble(){
 }
 
 double y(const double x, const double a){
-    if (x >= 1 && x <= 2){
+    if (x >= 1-DBL_EPSILON && x <= 2+DBL_EPSILON){
         return a*pow(x, 2*log(x));
     }
     if (x < 1){
