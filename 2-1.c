@@ -9,6 +9,14 @@
 double getDouble();
 
 /**
+ * @brief Вычисляет гипотенузу
+ * @param side1 - значение катета 1
+ * @param side2 - значение катета 2
+ * @return Рассчитанное значение
+ */
+double GetSide3(const double side1, const double side2);
+
+/**
  * @brief Вычисляет площать прямоугольного треугольника
  * @param side1 - значение катета 1
  * @param side2 - значение катета 2
@@ -39,7 +47,7 @@ int main(){
     double side1 = getDouble();
     double side2 = getDouble();
     checkSide(side1, side2);
-    double side3 = sqrt(pow(side1, 2) + pow(side2, 2));
+    double side3 = GetSide3(side1, side2);
     printf("Периметр = %lf\n", p(side1, side2, side3));
     printf("Площадь = %lf", s(side1, side2));
     return 0;
@@ -66,6 +74,13 @@ double p(const double side1, const double side2, const double side3){
     return side1+side2+side3;
 }
 
+
+
 double s(const double side1, const double side2){
     return  side1*side2/2;
 }
+
+double GetSide3(const double side1, const double side2){
+    return sqrt(pow(side1, 2) + pow(side2, 2));
+}
+    
